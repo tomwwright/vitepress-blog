@@ -4,13 +4,17 @@ import { defineConfig } from "vitepress";
 export default defineConfig({
   title: "Blog",
   description: "A VitePress Site",
+  cleanUrls: true,
   themeConfig: {
+    // footer: {
+    //   message: "Released under the MIT License.",
+    //   copyright: "Copyright © 2019-present Evan You",
+    // },
     // https://vitepress.dev/reference/default-theme-config
-    nav: [
-      { text: "Home", link: "/" },
-      { text: "Examples", link: "/markdown-examples" },
-    ],
-
+    // nav: [
+    //   { text: "Home", link: "/" },
+    //   { text: "Examples", link: "/markdown-examples" },
+    // ],
     sidebar: [
       {
         text: "Examples",
@@ -21,8 +25,13 @@ export default defineConfig({
       },
     ],
 
+    docFooter: {
+      prev: false,
+      next: false,
+    },
     socialLinks: [
       { icon: "github", link: "https://github.com/vuejs/vitepress" },
+      { icon: "linkedin", link: "https://linkedin.com/in/tomwwright" },
     ],
   },
 });
